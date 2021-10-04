@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="donorAnchor" prefHeight="857.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teambeta.bloodbank.DonorController">
+    <children>
+      <AnchorPane prefHeight="104.0" prefWidth="525.0" style="-fx-background-color: #eb4034;">
+         <children>
+              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="140.0" layoutY="32.0" prefHeight="40.0" prefWidth="245.0" text="Donor Details" textAlignment="CENTER" textFill="WHITE">
+                  <font>
+                      <Font name="Segoe UI Bold" size="30.0" />
+                  </font>
+              </Label>
+            <Button layoutX="31.0" layoutY="33.0" mnemonicParsing="false" onAction="#back" prefHeight="38.0" prefWidth="69.0" style="-fx-background-color: #ffffff;" text="Back" textFill="#eb4034">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Pane layoutY="104.0" prefHeight="750.0" prefWidth="525.0" style="-fx-background-color: #ffffff;">
+         <children>
+              <Label layoutX="91.0" layoutY="14.0" prefHeight="26.0" prefWidth="133.0" text="Full Name ">
+                  <font>
+                      <Font name="Segoe UI" size="20.0" />
+                  </font>
+              </Label>
+              <TextField fx:id="txtFullName" layoutX="91.0" layoutY="42.0" prefHeight="30.0" prefWidth="350.0" />
+            <Label layoutX="91.0" layoutY="77.0" prefHeight="26.0" prefWidth="133.0" text="NIC">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+              <TextField fx:id="txtNic" layoutX="91.0" layoutY="103.0" prefHeight="30.0" prefWidth="350.0" promptText="without V or X" />
+            <Label layoutX="91.0" layoutY="144.0" prefHeight="26.0" prefWidth="91.0" text="Gender">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+              <RadioButton layoutX="194.0" layoutY="146.0" mnemonicParsing="false" text="Male">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="tgGender" />
+               </toggleGroup>
+            </RadioButton>
+              <RadioButton layoutX="278.0" layoutY="146.0" mnemonicParsing="false" text="Female" toggleGroup="$tgGender">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="91.0" layoutY="187.0" prefHeight="26.0" prefWidth="115.0" text="Phone">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+              <TextField fx:id="txtPhone" layoutX="232.0" layoutY="185.0" prefHeight="30.0" prefWidth="209.0" promptText="without code 10 digit number" />
+            <Label layoutX="91.0" layoutY="228.0" prefHeight="26.0" prefWidth="133.0" text="Date Of Birth">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dob" layoutX="232.0" layoutY="226.0" prefHeight="30.0" prefWidth="209.0" />
+            <Label layoutX="91.0" layoutY="273.0" prefHeight="26.0" prefWidth="133.0" text="City">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCity" layoutX="232.0" layoutY="271.0" prefHeight="30.0" prefWidth="209.0" />
+            <Label layoutX="91.0" layoutY="310.0" prefHeight="26.0" prefWidth="133.0" text="Blood Group">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboBloodGroup" layoutX="232.0" layoutY="311.0" prefHeight="30.0" prefWidth="209.0" promptText="Select">
+               <effect>
+                  <Glow />
+               </effect>
+            </ComboBox>
+            <Label layoutX="91.0" layoutY="355.0" prefHeight="26.0" prefWidth="133.0" text="Weight">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtWeight" layoutX="232.0" layoutY="353.0" prefHeight="30.0" prefWidth="209.0" promptText="Kg" />
+            <Label layoutX="91.0" layoutY="398.0" prefHeight="26.0" prefWidth="144.0" text="Have you ever">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="91.0" layoutY="424.0" prefHeight="26.0" prefWidth="216.0" text="donated blood before?">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+              <RadioButton layoutX="336.0" layoutY="399.0" mnemonicParsing="false" text="Yes">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="tgPreviousDonations" />
+               </toggleGroup>
+            </RadioButton>
+              <RadioButton layoutX="337.0" layoutY="425.0" mnemonicParsing="false" text="No" toggleGroup="$tgPreviousDonations">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </RadioButton>
+            <Separator layoutX="93.0" layoutY="457.0" prefHeight="0.0" prefWidth="342.0" />
+              <Label layoutX="91.0" layoutY="464.0" text="If yes, please mention the last date that">
+                  <font>
+                      <Font name="Segoe UI" size="20.0" />
+                  </font>
+              </Label>
+            <Label layoutX="91.0" layoutY="488.0" text="you have donated blood,">
+               <font>
+                  <Font name="Segoe UI" size="20.0" />
+               </font>
+            </Label>
+              <DatePicker fx:id="lastDonateDate" layoutX="90.0" layoutY="519.0" prefHeight="30.0" prefWidth="350.0" />
+              <Label layoutX="91.0" layoutY="558.0" text="If any health problems, please mention">
+                  <font>
+                      <Font name="Segoe UI" size="20.0" />
+                  </font>
+              </Label>
+            <Button fx:id="btnSave" alignment="CENTER" contentDisplay="CENTER" layoutX="76.0" layoutY="685.0" mnemonicParsing="false" onAction="#save" prefHeight="38.0" prefWidth="175.0" style="-fx-background-color: #eb4034;" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCancel" alignment="CENTER" contentDisplay="CENTER" layoutX="273.0" layoutY="685.0" mnemonicParsing="false" onAction="#cancel" prefHeight="38.0" prefWidth="175.0" style="-fx-background-color: #eb4034;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="20.0" />
+               </font>
+            </Button>
+            <TextArea fx:id="txtHealthIssues" layoutX="91.0" layoutY="589.0" prefHeight="67.0" prefWidth="350.0" />
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
